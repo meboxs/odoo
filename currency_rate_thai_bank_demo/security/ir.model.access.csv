@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+thailand_config_manager,thailand_config,model_res_currency_rate_thailand_config,currency_rate_group_manager,1,1,1,1
+thailand_config_Line_manager,thailand_config_Line,model_res_currency_rate_thailand_config_line,currency_rate_group_manager,1,1,1,1
+currency_rate_thailand_state,currency_rate_thailand_state,model_res_currency_rate_thailand_config_state,currency_rate_group_manager,1,1,1,1
