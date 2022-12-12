@@ -9,6 +9,7 @@ Description related to Currency Rates of Bank Thailand DEMO.
     """,
     'author': "boxs.me",
     'website': "http://www.boxs.me",
+    'images': ['static/description/cover.png'],
     'category': 'Tools',
     'version': '15.0.1',
     'installable': True,
