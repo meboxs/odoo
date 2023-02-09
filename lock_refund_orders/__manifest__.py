@@ -10,9 +10,15 @@
     """,
     'summary': """ล็อคการทำเงินคืนให้สามารถทำได้ครั้งเดียว""",
 
-    'category': 'Server Tools',
-    'website': 'https://www.boxs.me',
-    'license': 'AGPL-3',
+    'website': "http://www.boxs.me",
+    'category': 'Tools', 
+    "sequence": 0,
+    "currency": "USD",
+    "price": "20.0",
+    "license": "LGPL-3",
+    'installable': True,
+    'application': True,
+    'auto_install': False,
     'depends': [
         'point_of_sale',
     ],
