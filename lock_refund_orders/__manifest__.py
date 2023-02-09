@@ -4,7 +4,7 @@
 {
     'name': 'Lock POS REFUND Return Products',
     'version': '14+3.0.1.0.0',
-    'author': 'Anulak Chaothai',
+    'author': 'Boxs>Me',
     'description': """
      
     """,
