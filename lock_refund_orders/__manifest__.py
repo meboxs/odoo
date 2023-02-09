@@ -11,7 +11,7 @@
     'summary': """ล็อคการทำเงินคืนให้สามารถทำได้ครั้งเดียว""",
 
     'website': "http://www.boxs.me",
-    'category': 'Tools', 
+    'category': 'Tools',
     "sequence": 0,
     "currency": "USD",
     "price": "20.0",
@@ -26,6 +26,5 @@
 
         # 'views/webhook_views.xml',
     ],
-   "images": ['static/description/cover.gif'],
- 
+    "images": ['static/description/cover.gif'],
 }
