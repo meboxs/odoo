@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="my_template">
+
+        <link rel="stylesheet" type="text/css" href="/boxs_controller_api/static/css/style.css"/>
+        <!-- Your view code here -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+        <link rel="stylesheet" type="text/css"
+              href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css"/>
+        <!-- BANNER -->
+        <header id="header " class="card" style="    height: 165px;    padding: 10px 0 0 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        <img src=" https://www.bentoli.com/wp-content/themes/bentoli/assets/images/logo.svg" width="150"
+                             height="150" class="d-inline-block align-top" alt=""/>
+                        <img class="o_logo" src="/web/image/res.company/1/logo"/>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <h1 class="align-self-center font-weight-bold text-center">Dashboard Monthly Target</h1>
+                            <h1 class="align-self-center font-weight-bold text-center ">
+                                <t t-esc="start_date"/>
+                                -
+                                <t t-esc="end_date"/>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card w-70 align-self-center  bg-danger">
+                            <div class="card-body">
+                                <h5 class=" font-weight-bold text-center text-white ">Card title</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="grey-bg container-fluid">
+            <section id="stats-subtitle">
+                <div class="row">
+
+                    <div class="col-xl-6 col-md-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body cleartfix">
+                                    <h5 class="card-title">Sales Export</h5>
+                                    <div class="media align-items-stretch">
+                                        <div class="align-self-center">
+                                            <i class="fa fa-paper-plane primary font-large-2 mr-2 "
+                                            style="font-size: 40px; color:rgb(48, 173, 9);"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3>Monthly Target</h3>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <h1 class="font-weight-bold" style="font-size: 40px; color:rgb(48, 173, 9);">
+                                                <t t-esc="export_target"  />
+                                            </h1>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="media align-items-stretch">
+                                        <div class="align-self-center">
+                                            <i class="fa-solid fa-money-bill-trend-up primary font-large-2 mr-2"
+                                            style="font-size: 40px; color:rgb(233, 172, 5);"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3>Amount Sales</h3>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <h1 class="font-weight-bold" style="font-size: 40px; color:rgb(233, 172, 5);" >
+                                                <t t-esc="export_amount"  />
+                                            </h1>
+                                        </div> 
+                                    </div>
+                                    <hr/>
+                                    <div class="media align-items-stretch">
+                                        <div class="align-self-center">
+                                            <i class="fa fa-rocket  primary font-large-2 mr-2 "
+                                               style="font-size: 40px; color:red;"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Remaining Goals</h4>
+                                        </div>
+                                        <div class="align-self-center"> 
+                                            <t t-if="export_Goals_if >0">
+                                                <h1 class="font-weight-bold" style="font-size: 40px; color:green;">
+                                                    <t t-esc="export_Goals" widget="money"/>
+                                                </h1>
+                                            </t>
+                                            <t t-else="">
+                                                <h1 class="font-weight-bold" style="font-size: 40px;color:red;">
+                                                    <t t-esc="export_Goals" widget="money"/>
+                                                </h1>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-6 col-md-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body cleartfix">
+                                    <h5 class="card-title">Sales Local</h5>
+                                    <div class="media align-items-stretch">
+                                        <div class="align-self-center">
+                                            <i class="fa fa-paper-plane primary font-large-2 mr-2 "
+                                            style="font-size: 40px; color:rgb(48, 173, 9);" ></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3>Monthly Target</h3>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <h1 class="font-weight-bold">
+                                                <t t-esc="local_target"   style="font-size: 40px; color:rgb(48, 173, 9);" />
+                                            </h1>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="media align-items-stretch">
+                                        <div class="align-self-center">
+                                            <i class="fa-solid fa-money-bill-trend-up primary font-large-2 mr-2"
+                                            style="font-size: 40px; color:rgb(233, 172, 5);"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h3>Amount Sales</h3>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <h1 class="font-weight-bold" style="font-size: 40px; color:rgb(233, 172, 5);">
+                                                <t t-esc="local_amount" widget="money"/>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="media align-items-stretch">
+                                        <div class="align-self-center">
+                                            <i class="fa fa-rocket  primary font-large-2 mr-2 "
+                                            style="font-size: 40px; color:red;"></i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4>Remaining Goals</h4>
+                                        </div>
+                                        <div class="align-self-center">
+                                            <h1 class="font-weight-bold"> 
+                                                <t t-if="local_Goals_if >0">
+                                                    <h1 class="font-weight-bold" style="font-size: 40px; color:green;">
+                                                        <t t-esc="local_Goals" widget="money"/>
+                                                    </h1>
+                                                </t>
+                                                <t t-else="">
+                                                    <h1 class="font-weight-bold" style="font-size: 40px;color:red;">
+                                                        <t t-esc="local_Goals" widget="money"/>
+                                                    </h1>
+                                                </t>
+
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-6 col-md-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body cleartfix">
+                                    <h5 class="card-title">popular products</h5>
+                                    <div class="media align-items-stretch">
+
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Product Name</th>
+                                                    <th scope="col">quantity</th>
+                                                    <th scope="col">sale price total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-set="my_var" t-value="1"/>
+                                                <t t-foreach="orders" t-as="sale_order">
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <t t-esc="my_var"/>
+                                                        </th>
+                                                        <td>
+                                                            <t t-esc="sale_order.id"/>
+                                                        </td>
+                                                        <td>
+                                                            <t t-esc="sale_order.name"/>
+                                                        </td>
+                                                        <td>
+                                                            <t t-esc="sale_order.commitment_date"/>
+                                                        </td>
+                                                    </tr>
+                                                    <t t-set="my_var" t-value="my_var + 1"/>
+                                                </t>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-md-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body cleartfix">
+                                    <h5 class="card-title">Popular Products</h5>
+                                    <div class="media align-items-stretch">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">First</th>
+                                                    <th scope="col">Last</th>
+                                                    <th scope="col">Handle</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>@mdo</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Jacob</td>
+                                                    <td>Thornton</td>
+                                                    <td>@fat</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </template>
+</odoo>
