@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2016 Vauxoo - https://www.vauxoo.com/
+# Copyright 2023 boxs.me - https://www.boxs.me
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
     'name': 'Turn off multiple refunds and retrospective refunds.',
