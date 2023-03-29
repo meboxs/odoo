@@ -4,7 +4,7 @@
 {
     'name': 'Turn off multiple refunds and retrospective refunds.',
     'version': '14+3.0.1.0.0',
-    'author': 'Boxs>Me',
+    'author': 'Boxs.Me',
     'description': """
     Turn off multi-refund and point-of-sale retroactive refunds so that they can be returned by a specific date.
     """,
